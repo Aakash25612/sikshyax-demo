@@ -15,9 +15,9 @@ export default function AdminLayout() {
   const navigate = useNavigate()
 
   return (
-    <div className="app">
-      <header className="topbar">
-        <Link to="/" className="logo">SikshyaX Admin</Link>
+    <div className="app gaming-bg">
+      <header className="topbar glass-bar">
+        <Link to="/" className="logo gradient-text">SikshyaX Admin</Link>
         <nav className="topnav">
           {nav.map(({ to, label, end }) => (
             <NavLink key={to} to={to} end={end} className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>

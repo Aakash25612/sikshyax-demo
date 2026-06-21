@@ -5,20 +5,21 @@ const tabs = [
   { to: '/app', label: 'Home', icon: Home, end: true },
   { to: '/app/play', label: 'Play', icon: Play },
   { to: '/app/practice', label: 'Practice', icon: BookOpen },
-  { to: '/app/ai', label: 'AI Tutor', icon: Sparkles },
+  { to: '/app/ai', label: 'AI', icon: Sparkles },
   { to: '/app/profile', label: 'Profile', icon: User },
 ]
 
 export default function AppShell() {
   return (
-    <div className="app-shell">
+    <div className="app-shell gaming-bg">
+      <div className="shell-glow" />
       <div className="app-content">
         <Outlet />
       </div>
-      <nav className="bottom-nav">
+      <nav className="bottom-nav glass-bar">
         {tabs.map(({ to, label, icon: Icon, end }) => (
           <NavLink key={to} to={to} end={end} className={({ isActive }) => (isActive ? 'tab active' : 'tab')}>
-            <Icon size={22} />
+            <span className="tab-icon-wrap"><Icon size={20} /></span>
             <span>{label}</span>
           </NavLink>
         ))}
